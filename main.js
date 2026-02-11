@@ -47,7 +47,10 @@ function renderRepos(repos) {
 function renderFollowers(followers) {
     const list = document.getElementById('followers-list');
     list.innerHTML = followers.map(f => `
-        <img src="${f.avatar_url}" title="${f.login}" width="50" style="border-radius: 50%; margin: 5px;">
+        <div class="follower-item">
+            <img src="${f.avatar_url}" alt="${f.login}">
+            <p>${f.login}</p>
+        </div>
     `).join('');
 }
 
