@@ -14,7 +14,7 @@ async function getGitHubData() {
         renderRepos(repos);
 
         // Obtener lista de seguidores 
-        const followersRes = await fetch(`https://api.github.com/users/${USERNAME}/followers?per_page=5`);
+        const followersRes = await fetch(`https://api.github.com/users/${USERNAME}/followers?per_page=15`);
         const followers = await followersRes.json();
         renderFollowers(followers);
 
